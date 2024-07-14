@@ -101,7 +101,7 @@ resource "aws_instance" "instance9" {
   associate_public_ip_address = true
   subnet_id = aws_subnet.mysubnet9.id
   vpc_security_group_ids = [aws_security_group.mysg9.id]
-  key_name = "awskey-124"
+  key_name = "jen"
 
   tags = {
     Name = "Prod-server"
