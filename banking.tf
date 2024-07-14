@@ -95,13 +95,13 @@ resource "aws_security_group" "mysg9" {
 
 # Create Instance
 
-resource "aws_instance" "instance9" {
+resource "aws_instance" "Prod-server" {
   ami           = "ami-0f58b397bc5c1f2e8"
   instance_type = "t2.micro"
   associate_public_ip_address = true
   subnet_id = aws_subnet.mysubnet9.id
   vpc_security_group_ids = [aws_security_group.mysg9.id]
-  key_name = "jen"
+  key_name = "bank-project"
 
   tags = {
     Name = "Prod-server"
